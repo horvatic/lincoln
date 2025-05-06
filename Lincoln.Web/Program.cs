@@ -16,7 +16,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/health", () =>
+app.MapGet("lincoln/health", () =>
 {
     return "Ok";
 })
