@@ -23,4 +23,11 @@ app.MapGet("lincoln/health", () =>
 .WithName("health")
 .WithOpenApi();
 
+app.MapGet("lincoln/bye", () =>
+{
+    return "bye";
+})
+.WithName("bye")
+.WithOpenApi();
+
 app.Run();
