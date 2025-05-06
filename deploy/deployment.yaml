@@ -17,7 +17,13 @@ spec:
     spec:
       containers:
       - name: lincoln
-        image: horvatic/lincoln:1.5
+        image: horvatic/lincoln:1.6
         ports:
           - containerPort: 80
             name: "lincoln-http"
+        env:
+        - name: NEW_RELIC_LICENSE_KEY
+          valueFrom:
+            secretKeyRef: 
+              name: relic
+              key: relic-key
