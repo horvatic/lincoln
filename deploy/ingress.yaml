@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: lincoln-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /lincoln
+        pathType: Prefix
+        backend:
+          service:
+            name: lincoln
+            port: 
+              number: 80

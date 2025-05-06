@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lincoln
+  labels:
+    app: lincoln
+spec:
+  revisionHistoryLimit : 1
+  selector:
+    matchLabels:
+      app: lincoln
+  template:
+    metadata:
+      name: lincoln
+      labels:
+        app: lincoln
+    spec:
+      containers:
+      - name: lincoln
+        image: horvatic/lincoln:${TAG}
+        ports:
+          - containerPort: 80
+            name: "lincoln-http"
