@@ -1,0 +1,6 @@
+@Lincoln.Web_HostAddress = http://0.0.0.0:5013
+
+GET {{Lincoln.Web_HostAddress}}/health/
+Accept: application/json
+
+###
