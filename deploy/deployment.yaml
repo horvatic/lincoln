@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: lincoln
-        image: horvatic/lincoln:latest
+        image: horvatic/lincoln:1.0
         ports:
           - containerPort: 80
             name: "lincoln-http"
