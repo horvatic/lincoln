@@ -47,9 +47,9 @@ jobs:
 
     - name: Build
       run: |
-        .\.sonar\scanner\dotnet-sonarscanner begin /k:"horvatic_lincoln" /o:"horvatic" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+        ./sonar/scanner/dotnet-sonarscanner begin /k:"horvatic_lincoln" /o:"horvatic" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
         dotnet build Lincoln.Web/Lincoln.Web.csproj
-        .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
+        ./sonar/scanner/dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
 
     - name: Login to DockerHub
       uses: docker/login-action@v3
