@@ -5,8 +5,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    types: [opened, synchronize, reopened]
 
 jobs:
   build:
@@ -37,4 +35,4 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true 
-        tags: horvatic/lincoln:1.4
+        tags: horvatic/lincoln:1.5
